@@ -12,3 +12,68 @@
 @media(max-width:500px){.container{width:min(100% - 32px,1180px)}.announcement{font-size:9px;height:32px}.site-header{height:64px}.primary-nav{top:63px}.brand{font-size:19px}.brand-symbol{height:31px;width:31px}.hero-grid{padding-top:43px}.hero h1{font-size:48px}.hero-lede{font-size:13px}.hero-actions{align-items:flex-start;flex-direction:column;gap:14px}.button-light{width:100%}.hero-assurances{display:grid;gap:8px}.hero-art{min-height:285px}.art-card-main{width:79%;padding:16px}.art-card-main h2{font-size:18px}.art-card-main p{font-size:10px}.art-card-back{width:195px;height:130px;padding:14px;right:0}.art-note{font-size:9px}.art-stamp{font-size:7px}.hero-bottom-mark{font-size:8px}.section{padding:57px 0}.help-grid{grid-template-columns:1fr}.help-card{min-height:205px;padding:17px}.help-icon{margin-bottom:12px}.help-card p{max-width:380px}.process-step{grid-template-columns:34px 1fr 20px;gap:10px}.process-step h3{font-size:15px}.process-step p{font-size:11px}.promise-grid{grid-template-columns:1fr;gap:16px}.promise-grid>div:first-child{grid-column:auto}.promise-band h2{font-size:25px}.promise-item{border-left:0;border-top:1px solid #916a4c48;padding:13px 0 0;min-height:unset}.guide-grid{grid-template-columns:1fr}.guide-feature{grid-column:auto}.guide-card{min-height:195px}.start-checks{grid-template-columns:1fr}.intake-card{padding:22px 18px 17px}.form-row{grid-template-columns:1fr;gap:0}.faq-list summary{font-size:12px}.footer-main{grid-template-columns:1fr 1fr;gap:22px}.footer-brand-col{grid-column:1/-1}.footer-note{grid-column:1/-1}.footer-bottom{font-size:8px}}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;transition:none!important}}
 .form-honeypot{position:absolute!important;left:-10000px!important;top:auto!important;width:1px!important;height:1px!important;overflow:hidden!important}
+
+/* Small-screen refinements */
+@media(max-width:500px){
+  html{scroll-padding-top:76px}
+  body{overflow-x:clip}
+  .container{width:calc(100% - 32px);min-width:0}
+  .announcement{height:32px;font-size:9px}
+  .announcement-inner{justify-content:center;gap:7px;white-space:nowrap}
+  .announcement-divider,.announcement-secondary{display:none}
+  .hero-grid{min-width:0;gap:0;padding:36px 0 25px}
+  .hero-copy,.hero-art{min-width:0;width:100%}
+  .hero h1{font-size:clamp(40px,11vw,48px);max-width:100%;line-height:1.02}
+  .hero-lede{max-width:100%;font-size:14px;line-height:1.65;margin:16px 0 20px}
+  .hero-actions{gap:13px}
+  .hero-art{min-height:250px;margin-top:10px}
+  .ring-one{width:230px;height:230px}
+  .ring-two{width:290px;height:290px}
+  .art-card-main{width:min(285px,82%);padding:16px 18px}
+  .art-card-main h2{font-size:18px;margin-top:15px}
+  .art-card-main p{font-size:11px}
+  .art-card-back{width:175px;height:118px;right:2%;top:18px;padding:14px}
+  .art-note{left:0;bottom:0;font-size:9px}
+  .art-stamp{display:none}
+  .hero-bottom-inner{min-height:44px}
+  .section{padding:52px 0}
+  .help-grid{grid-template-columns:1fr;gap:9px;border:0}
+  .help-card{display:grid;grid-template-columns:36px minmax(0,1fr);align-items:start;gap:0 12px;min-height:0;padding:15px;border:1px solid var(--line);border-radius:8px}
+  .help-icon{grid-column:1;grid-row:1 / span 3;width:36px;height:36px;margin:2px 0 0;border-radius:9px}
+  .help-number{top:14px;right:14px}
+  .help-card h3{grid-column:2;margin:0 28px 4px 0;font-size:15px;line-height:1.35}
+  .help-card p{grid-column:2;max-width:none;margin:0 0 5px;font-size:11px;line-height:1.55}
+  .card-arrow{grid-column:2;padding-top:4px;font-size:10px}
+  .process-layout{min-width:0;gap:28px}
+  .promise-band{padding:33px 0}
+  .guide-grid{gap:10px}
+  .guide-card{min-height:175px;padding:18px}
+  .start-section{padding:52px 0}
+  .start-grid{min-width:0;gap:22px}
+  .start-copy,.intake-card{min-width:0;width:100%}
+  .start-copy h2{font-size:clamp(38px,10vw,46px)}
+  .intake-card{padding:22px 17px 18px}
+  .form-row{grid-template-columns:minmax(0,1fr);gap:0}
+  .form-field input,.form-field select,.form-field textarea{font-size:16px;min-height:46px}
+  .form-field textarea{min-height:100px}
+  .consent{font-size:11px;gap:10px;line-height:1.55}
+  .consent input{width:18px;height:18px;flex-basis:18px;margin-top:1px}
+  .faq-layout{min-width:0;gap:24px}
+  .faq-list details{padding:15px 0}
+  .faq-list summary{font-size:14px;line-height:1.45}
+  .faq-list details p{font-size:12px}
+  .footer-main{grid-template-columns:1fr 1fr;gap:20px 16px}
+  .footer-links{font-size:11px}
+  .footer-note{padding-left:12px}
+  .footer-note p{font-size:10px}
+  .footer-bottom{font-size:9px}
+}
+@media(max-width:360px){
+  .container{width:calc(100% - 28px)}
+  .hero h1{font-size:40px}
+  .hero-assurances{font-size:9px}
+  .help-card{grid-template-columns:32px minmax(0,1fr);gap:0 10px;padding:13px}
+  .help-icon{width:32px;height:32px}
+  .help-card h3{font-size:14px}
+  .intake-card{padding-inline:14px}
+}
