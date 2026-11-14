@@ -27,8 +27,30 @@ document.querySelectorAll("[data-service]").forEach((card) => {
   });
 });
 
-intakeForm?.addEventListener("submit", (event) => {
+intakeForm?.addEventListener("submit", async (event) => {
   event.preventDefault();
-  formStatus.textContent = "Thanks. This concept form is not connected, so your details were not sent or stored.";
-  intakeForm.reset();
+  if (!formStatus || !intakeForm.reportValidity()) return;
+
+  const submitButton = intakeForm.querySelector('button[type="submit"]');
+  if (submitButton) submitButton.disabled = true;
+  intakeForm.setAttribute("aria-busy", "true");
+  formStatus.textContent = "Sending your enquiry…";
+
+  try {
+    const response = await fetch(intakeForm.action, {
+      method: "POST",
+      body: new FormData(intakeForm),
+      headers: { Accept: "application/json" },
+    });
+
+    if (!response.ok) throw new Error("Form submission failed");
+
+    intakeForm.reset();
+    formStatus.textContent = "Thanks — your enquiry has been sent. Helppoint will follow up by email.";
+  } catch {
+    formStatus.textContent = "We couldn’t send your enquiry just now. Please try again in a moment.";
+  } finally {
+    intakeForm.removeAttribute("aria-busy");
+    if (submitButton) submitButton.disabled = false;
+  }
 });

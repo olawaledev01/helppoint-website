@@ -90,15 +90,17 @@
     <section class="start-section" id="start">
       <div class="container start-grid">
         <div class="start-copy"><p class="eyebrow">Your next step starts here</p><h2>Tell us the basics.<br><em>Keep it simple.</em></h2><p>Choose what best fits and share only what you’re comfortable sharing. Don’t include account numbers, card details, passwords, or recovery phrases.</p><div class="start-checks"><div><span>✓</span><p><b>No need to have it all figured out</b><br>We’ll start with what you know.</p></div><div><span>✓</span><p><b>No commitment to proceed</b><br>Review your options before deciding.</p></div></div><p class="contact-line">Prefer to talk? <a href="#start">Use the enquiry form <span>↗</span></a></p></div>
-        <form class="intake-card" id="intake-form">
+        <form class="intake-card" id="intake-form" action="https://formspree.io/f/mljbgvao" method="POST">
           <div class="form-heading"><span class="form-step">START HERE · 1 OF 1</span><h3>What happened?</h3><p>Share the short version. You can leave the details for later.</p></div>
-          <div class="form-row"><div class="form-field"><label for="full-name">Your name</label><input id="full-name" name="fullName" autocomplete="name" required placeholder="Name"></div><div class="form-field"><label for="email">Email address</label><input id="email" name="email" type="email" autocomplete="email" required placeholder="you@example.com"></div></div>
+          <div class="form-row"><div class="form-field"><label for="full-name">Your name</label><input id="full-name" name="name" autocomplete="name" required placeholder="Name"></div><div class="form-field"><label for="email">Email address</label><input id="email" name="email" type="email" autocomplete="email" required placeholder="you@example.com"></div></div>
           <div class="form-field"><label for="situation">Which situation is closest?</label><select id="situation" name="situation" required><option value="">Choose a starting point</option><option>Crypto or digital assets</option><option>Investment or trading scam</option><option>Bank transfer or payment fraud</option><option>Romance or social engineering</option><option>Phishing or account access</option><option>I'm not sure yet</option></select></div>
-          <div class="form-field"><label for="summary">A few words about it <span class="optional">Optional</span></label><textarea id="summary" name="summary" rows="4" placeholder="For example: I transferred money to an online investment platform and now can't withdraw."></textarea></div>
-          <label class="consent"><input type="checkbox" name="permission" required><span>I understand this is a demo form and my details will not be sent.</span></label>
+          <div class="form-field"><label for="summary">A few words about it <span class="optional">Optional</span></label><textarea id="summary" name="message" rows="4" placeholder="For example: I transferred money to an online investment platform and now can't withdraw."></textarea></div>
+          <div class="form-honeypot" aria-hidden="true"><label for="website">Leave this field blank</label><input id="website" name="_gotcha" tabindex="-1" autocomplete="off"></div>
+          <input type="hidden" name="_subject" value="New Helppoint enquiry">
+          <label class="consent"><input type="checkbox" name="consent" value="I agree" required><span>I agree to have my name, email, situation, and message sent to Helppoint so it can respond to my enquiry.</span></label>
           <button class="button button-dark submit-button" type="submit">Request a conversation <span aria-hidden="true">→</span></button>
           <p class="form-privacy"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M10 2.5 16 5v4.3c0 3.8-2.4 6.8-6 8.2-3.6-1.4-6-4.4-6-8.2V5l6-2.5Z" stroke="currentColor" stroke-width="1.4"/><path d="m7.6 9.8 1.6 1.6 3.2-3.2" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg> Don’t send financial credentials or recovery phrases.</p>
-          <div class="form-status" role="status" aria-live="polite"></div>
+          <div class="form-status" role="status" aria-live="polite">Your enquiry is sent through Formspree and delivered to Helppoint. Please don’t include passwords, payment details, one-time codes, or recovery phrases.</div>
         </form>
       </div>
     </section>
@@ -109,7 +111,7 @@
         <details><summary>Should I pay an upfront fee?</summary><p>Don’t rush. Ask for a written agreement that explains every fee, what work will be done, possible extra costs, and what happens if recovery is unsuccessful.</p></details>
         <details><summary>What should I do first?</summary><p>Contact the bank or platform you used through its official website or the number on your card. Ask whether the payment can be stopped or recalled, and report suspected account access immediately.</p></details>
         <details><summary>What information should I never share?</summary><p>Never share passwords, one-time passcodes, private keys, or wallet recovery phrases. No legitimate recovery conversation needs your seed phrase.</p></details>
-        <details><summary>Is the form secure and active?</summary><p>This concept site is a front-end demo. The form does not send or store information. A real business should connect it to an appropriately secured service and publish a privacy notice before collecting personal details.</p></details>
+        <details><summary>How does the enquiry form work?</summary><p>Enquiries are processed by Formspree and delivered to Helppoint. Share only what is needed for a reply. Never include account numbers, passwords, one-time codes, private keys, or wallet recovery phrases.</p></details>
       </div></div>
     </section>
   </main>

@@ -1,17 +1,17 @@
 # Helppoint website
 
-A responsive, single-page website concept for practical guidance after online fraud. It uses plain HTML, CSS, and JavaScript, so there are no package installs or build steps.
+A responsive static website built with HTML, CSS, and JavaScript. The enquiry form sends submissions to the Helppoint enquiries form in Formspree.
 
-## Open in VS Code
+## Preview locally
 
-Open this folder in VS Code. The site is split into three files:
+Open `index.html` in a browser, or use VS Code's Live Server extension and select **Go Live**.
 
-- `index.html` — page content and structure
-- `styles.css` — layout, colors, and responsive styling
-- `script.js` — mobile navigation, service shortcuts, and demo form behavior
+## View enquiries
 
-## Preview
+Sign in at [Formspree](https://formspree.io/forms) with the account linked to Helppoint. Open **Helppoint enquiries** to view submissions. New submissions are also delivered to the email address configured on that Formspree form.
 
-Open `index.html` in a browser, or use the recommended **Live Server** extension and select **Go Live** from the VS Code status bar for automatic refresh while editing.
+The site's form endpoint is in the `action` attribute on the enquiry form in `index.html`. Do not add passwords, one-time codes, payment details, account numbers, or wallet recovery phrases to the form.
 
-The enquiry form is a front-end demo only. It does not send or store submissions. The contact route, privacy notice, and all real business and regulatory details must be configured before production use. Do not publish unverified claims about licensing, results, or recovered funds.
+## Deploy
+
+The site is static and can be deployed through the connected Vercel project. Push changes to the repository's `main` branch for Vercel to build a new deployment.
