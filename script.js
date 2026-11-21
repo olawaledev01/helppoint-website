@@ -46,7 +46,7 @@ intakeForm?.addEventListener("submit", async (event) => {
     if (!response.ok) throw new Error("Form submission failed");
 
     intakeForm.reset();
-    formStatus.textContent = "Thanks — your enquiry has been sent. Helppoint will follow up by email.";
+    formStatus.textContent = "Thanks — your enquiry has been sent. Vaitbrige will follow up by email.";
   } catch {
     formStatus.textContent = "We couldn’t send your enquiry just now. Please try again in a moment.";
   } finally {

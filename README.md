@@ -1,6 +1,6 @@
-# Helppoint website
+# Vaitbrige website
 
-A responsive static website built with HTML, CSS, and JavaScript. The enquiry form sends submissions to the Helppoint enquiries form in Formspree.
+A responsive static website built with HTML, CSS, and JavaScript. The enquiry form sends submissions to the Vaitbrige enquiries form in Formspree.
 
 ## Preview locally
 
@@ -8,7 +8,7 @@ Open `index.html` in a browser, or use VS Code's Live Server extension and selec
 
 ## View enquiries
 
-Sign in at [Formspree](https://formspree.io/forms) with the account linked to Helppoint. Open **Helppoint enquiries** to view submissions. New submissions are also delivered to the email address configured on that Formspree form.
+Sign in at [Formspree](https://formspree.io/forms) with the account linked to Vaitbrige. Open **Vaitbrige enquiries** to view submissions. New submissions are also delivered to the email address configured on that Formspree form.
 
 The site's form endpoint is in the `action` attribute on the enquiry form in `index.html`. Do not add passwords, one-time codes, payment details, account numbers, or wallet recovery phrases to the form.
 
